@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module"
+    version="3.1"
+    client="site">
+	<name>Currency NBU</name>
+	<creationDate>07.2016</creationDate>
+	<author>Rybalko Igor</author>
+	<copyright>GNU/GPL</copyright>
+	<authorEmail>igorrybalko2009@yandex.ru</authorEmail>
+    <authorUrl>wolfweb.com.ua</authorUrl>
+    <version>1.0.0</version>
+	<description>Exchange Rates NBU</description>
+	<files>
+		<filename module="mod_currency_nbu">mod_currency_nbu.php</filename>
+		<filename>index.html</filename>
+		<filename>cron_currency_file.php</filename>
+		<filename>data.json</filename>
+		<filename>helper.php</filename>
+		<filename>mod_currency_nbu.xml</filename>
+		<folder>tmpl</folder>
+  </files>
+	  
+  <config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+            </fieldset>
+
+		</fields>
+	</config>
+  
+</extension>
