@@ -7,9 +7,8 @@
  * @license GNU/GPL: http://www.gnu.org/copyleft/gpl.html
  *
 */
- 
-defined('_JEXEC') or die('Restricted access'); ?>
-
+defined('_JEXEC') or die('Restricted access'); 
+?>
 <div class="modcurr<?php echo $moduleclass_sfx; ?>">
 	<ul>
 		<li>USD: <?php echo $data['usd']; ?></li>
