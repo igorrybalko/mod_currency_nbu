@@ -4,12 +4,12 @@
     version="3.1"
     client="site">
 	<name>Currency NBU</name>
-	<creationDate>07.2016</creationDate>
+	<creationDate>03.2017</creationDate>
 	<author>Rybalko Igor</author>
 	<copyright>GNU/GPL</copyright>
 	<authorEmail>igorrybalko2009@yandex.ru</authorEmail>
     <authorUrl>wolfweb.com.ua</authorUrl>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 	<description>Exchange Rates NBU</description>
 	<files>
 		<filename module="mod_currency_nbu">mod_currency_nbu.php</filename>
