@@ -2,8 +2,8 @@
  /**
  * @package mod_currency_nbu
  * @author Rybalko Igor
- * @version 1.1
- * @copyright (C) 2017 http://wolfweb.com.ua
+ * @version 1.1.1
+ * @copyright (C) 2018 http://wolfweb.com.ua
  * @license GNU/GPL: http://www.gnu.org/copyleft/gpl.html
  *
 */
@@ -33,11 +33,8 @@ class ModCurrencyNbuHelper{
 
 	private function _getNBURate(){
 		$date  = date('d.m.Y');
-		$curl_handle = curl_init();
-		curl_setopt($curl_handle, CURLOPT_URL,'http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json');
-		curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, true);
-		$currency = json_decode(curl_exec($curl_handle));
-		curl_close($curl_handle);
+		$rates = [];
+		$currency = json_decode(file_get_contents('http://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'));
 
 		if (is_array($currency)) {
 			foreach($currency as $v){
@@ -54,14 +51,15 @@ class ModCurrencyNbuHelper{
 				}
 			}
 
-			$rates = array(
+			$rates = [
 				'usd'   => $rateUSD,
 				'eur'   => $rateEUR,
 				'rub'   => $rateRUB,
 				'date'  => $date
-			);
+			];
 
-			return $rates;
 		}
+
+		return $rates;
 	}
 }
