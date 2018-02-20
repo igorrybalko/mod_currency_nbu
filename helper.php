@@ -2,7 +2,7 @@
  /**
  * @package mod_currency_nbu
  * @author Rybalko Igor
- * @version 1.1.1
+ * @version 1.2.0
  * @copyright (C) 2018 http://wolfweb.com.ua
  * @license GNU/GPL: http://www.gnu.org/copyleft/gpl.html
  *
@@ -11,11 +11,11 @@ defined('_JEXEC') or die('Restricted access');
 
 class ModCurrencyNbuHelper{
 
-	public function getRates(){
+	public function getRates($cache_time){
 
 		$cache = JFactory::getCache('modCurrencyNBU', '');
 		$cache->setCaching(true);
-		$cache->setLifeTime(360);
+		$cache->setLifeTime($cache_time);
 		$rates = $cache->get('rates');
 
 		if(!$rates) {
