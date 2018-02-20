@@ -9,13 +9,14 @@
 	<copyright>GNU/GPL</copyright>
 	<authorEmail>igorrybalko2009@yandex.ru</authorEmail>
     <authorUrl>wolfweb.com.ua</authorUrl>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
 	<description>Exchange Rates NBU Developed by http://wolfweb.com.ua</description>
 	<files>
 		<filename module="mod_currency_nbu">mod_currency_nbu.php</filename>
 		<filename>index.html</filename>
 		<filename>helper.php</filename>
 		<filename>mod_currency_nbu.xml</filename>
+		<folder>language</folder>
 		<folder>tmpl</folder>
   </files>
 	  
@@ -44,5 +45,8 @@
 
 		</fields>
 	</config>
-  
+	<updateservers>
+		<server type="collection">http://example.com/list.xml</server>
+		<server type="extension" priority="2" name="My Extension's Updates">http://example.com/extension.xml</server>
+	</updateservers>
 </extension>
